@@ -201,7 +201,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(136, 180, 78, .7), rgba(136, 180, 78, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(136, 180, 78, .7), rgba(136, 180, 78, .7)), url(../img/pageheadimg.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -609,6 +609,120 @@ a:hover {
     }
 }
 
+/* Floating Product Category Navigation */
+.product-category-float {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 97;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Green Circle Icons */
+.category-dot {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+    .category-dot:hover {
+        background: var(--primary);
+        transform: scale(1.2);
+    }
+
+/* Mobile: hide category dots */
+
+@media (max-width: 768px) {
+    .product-category-float {
+        display: flex;
+        right: 15px;
+        top: auto;
+        bottom: 160px; /* sits ABOVE WhatsApp */
+        transform: none;
+        gap: 10px;
+    }
+
+    .category-dot {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Floating Category Icons */
+.product-category-float {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 97;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Icon Button */
+.category-icon {
+    width: 52px;
+    height: 52px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), inset 0 -3px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    /* PNG inside button */
+    .category-icon img {
+        width: 26px;
+        height: 26px;
+        object-fit: contain;
+    }
+
+    /* Hover 3D lift */
+    .category-icon:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25), inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Active click feedback */
+    .category-icon:active {
+        transform: translateY(0) scale(0.98);
+    }
+
+/* Mobile placement */
+@media (max-width: 768px) {
+    .product-category-float {
+        right: 15px;
+        top: auto;
+        bottom: 160px; /* above WhatsApp */
+        transform: none;
+    }
+
+    .category-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+        .category-icon img {
+            width: 22px;
+            height: 22px;
+        }
+}
 
 
 
